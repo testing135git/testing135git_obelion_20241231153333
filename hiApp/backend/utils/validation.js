@@ -1,43 +1,25 @@
-const User = require('../models/User');
-const bcrypt = require('bcrypt');
+const { check, validationResult } = require('express-validator');
 
-// Validate user input for login
-exports.validateLoginInput = (req, res, next) => {
-  const { username, password } = req.body;
+// Validation rules for signup
+const validateSignup = [
+  check('name')
+    .notEmpty().withMessage('Name is required'),
 
-  if (!username || !password) {
-    return res.status(400).json({ error: 'Username and password are required' });
-  }
+  check('email')
+    .isEmail().withMessage('Valid email is required'),
 
-  next();
-};
+  check('password')
+    .isLength({ min: 6 }).withMessage('Password must be at least 6 characters'),
 
-// Validate user input for registration
-exports.validateRegisterInput = (req, res, next) => {
-  const { username, password } = req.body;
-
-  if (!username || !password) {
-    return res.status(400).json({ error: 'Username and password are required' });
-  }
-
-  if (password.length < 6) {
-    return res.status(400).json({ error: 'Password must be at least 6 characters long' });
-  }
-
-  next();
-};
-
-// Validate user existence
-exports.validateUserExistence = async (req, res, next) => {
-  const { username } = req.body;
-
-  try {
-    const user = await User.findOne({ where: { username } });
-    if (user) {
-      return res.status(400).json({ error: 'Username is already taken' });
+  (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
     }
     next();
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
   }
+];
+
+module.exports = {
+  validateSignup
 };

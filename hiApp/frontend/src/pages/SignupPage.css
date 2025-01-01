@@ -1,0 +1,110 @@
+.signup-page {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.signup-header {
+  margin-bottom: 20px;
+}
+
+.signup-header .logo {
+  width: 150px;
+  height: auto;
+}
+
+.signup-nav {
+  margin-bottom: 20px;
+}
+
+.signup-nav .nav-link {
+  color: #007BFF;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.signup-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+.signup-main {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-main .success-message {
+  color: #28A745;
+  margin-bottom: 15px;
+}
+
+.signup-form .form-group {
+  margin-bottom: 15px;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.signup-form .input-error {
+  border: 1px solid #FFC107;
+}
+
+.signup-form .input-success {
+  border: 1px solid #28A745;
+}
+
+.signup-form .error-text {
+  color: #FFC107;
+  font-size: 0.9em;
+}
+
+.submit-button {
+  background-color: #007BFF;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-footer {
+  margin-top: 20px;
+  color: #6C757D;
+}
+
+.signup-footer .footer-link {
+  color: #6C757D;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.signup-footer .footer-link:hover {
+  text-decoration: underline;
+}
