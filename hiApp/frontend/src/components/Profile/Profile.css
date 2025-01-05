@@ -1,0 +1,110 @@
+.profile-container {
+  background-color: #1d1f21;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.profile-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #282c34;
+}
+
+.profile-logo {
+  max-height: 50px;
+}
+
+.profile-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.profile-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.profile-nav-link:hover {
+  color: #007BFF;
+}
+
+.profile-main {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #343a40;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 1rem;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.save-button {
+  padding: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.profile-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #282c34;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #007BFF;
+}
