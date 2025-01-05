@@ -47,10 +47,10 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = await validateInput();
+    /*const validationErrors = await validateInput();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-    } else {
+    } else {*/
       try {
         await axios.post('https://hiapp-backend.cloud-stacks.com/api/signup', formData, {
           headers: {
@@ -66,7 +66,7 @@ const Signup = () => {
           setErrors({ general: error.response.data.error });
         }
       }
-    }
+    
   };
 
   return (
