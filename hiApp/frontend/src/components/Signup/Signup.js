@@ -25,7 +25,7 @@ const Signup = () => {
     }));
   };
 
-  const validateInput = async () => {
+ /* const validateInput = async () => {
     try {
       await axios.post('https://hiapp-backend.cloud-stacks.com/api/signup/validation', formData, {
         headers: {
@@ -43,7 +43,7 @@ const Signup = () => {
       }
       return { general: 'Validation failed' };
     }
-  };
+  };*/
 
   const handleSubmit = async (e) => {
     e.preventDefault();
